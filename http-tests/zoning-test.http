@@ -1,0 +1,29 @@
+### Test Zoning Check - R1 zone
+POST http://localhost:3000/zoning/check
+Content-Type: application/json
+
+{
+  "zoneType": "R1",
+  "lotSizeSqFt": 6000
+}
+
+###
+
+### Test Zoning Check - R2 zone
+POST http://localhost:3000/zoning/check
+Content-Type: application/json
+
+{
+  "zoneType": "R2",
+  "lotSizeSqFt": 8000
+}
+
+###
+
+### Invalid request (should error)
+POST http://localhost:3000/zoning/check
+Content-Type: application/json
+
+{
+  "zoneType": "R1"
+}
